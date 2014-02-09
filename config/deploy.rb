@@ -41,7 +41,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # continue, see lib/capistrano/tasks/run_tests.cap
 set :tests, ["spec"]
 
-Default value for keep_releases is 5
+# Default value for keep_releases is 5
 set :keep_releases, 5
 
 # which config files should be copied by deploy:setup_config 
