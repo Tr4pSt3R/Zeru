@@ -6,7 +6,7 @@ set :repo_url, 'git@github.com:Tr4pSt3R/Zeru.git'
 
 # Setup RVM
 set :rbenv_type, :system
-set :rbenv_ruby, '2.0.0-p0'
+set :rbenv_ruby, '2.0.0-p247'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 
@@ -37,7 +37,7 @@ set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
 
-# what specs should be rin before deloyment is allowed to
+# what specs should be run before deloyment is allowed to
 # continue, see lib/capistrano/tasks/run_tests.cap
 set :tests, ["spec"]
 
@@ -47,15 +47,7 @@ set :keep_releases, 5
 # which config files should be copied by deploy:setup_config 
 # see documentation in lib/capistrano/tasls/setup_config.cap 
 # for details of operations
-# set(:config_files. %w(
-#   nginx.conf,
-#   application.yml,
-#   database.example.yml,
-#   log_rotation,
-#   monit,
-#   unicorn.rb, 
-#   unicorn_init.sh
-#   ))
+set(:config_files, %w( database.example.yml ))
 
 # which config files should be made executable after copying
 # by deploy:setup_config
