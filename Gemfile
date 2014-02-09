@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Net::SSH: a pure Ruby implementation of the SSH2 client protocol
-gem 'net-ssh', '~> 2.7'
+gem 'net-ssh', '2.7.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
