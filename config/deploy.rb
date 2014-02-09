@@ -45,7 +45,7 @@ set :tests, ["spec"]
 set :keep_releases, 5
 
 # which config files should be copied by deploy:setup_config 
-# see documentation in lib/capistrano/tasls/setu[_config.cap 
+# see documentation in lib/capistrano/tasls/setup_config.cap 
 # for details of operations
 # set(:config_files. %w(
 #   nginx.conf,
