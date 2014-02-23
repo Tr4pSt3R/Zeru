@@ -64,6 +64,12 @@ namespace :deploy do
     end
   end
 
+  task :setup_config do
+    on roles(:app) do
+       #some stuff
+    end
+  end
+
   after :publishing, :restart
 
   after :restart, :clear_cache do
