@@ -56,7 +56,7 @@ set(:config_files, %w( database.example.yml ))
 # ))
 
 desc "Symlink shared config files"
-task :synlink_config_files do 
+task :symlink_config_files do 
   run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
 end
 
