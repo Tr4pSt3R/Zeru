@@ -55,6 +55,11 @@ set(:config_files, %w( database.example.yml ))
 #   unicorn_init.sh
 # ))
 
+desc "Symlink shared config files"
+task :synlink_config_files do 
+  run "#{ try_sudo } ln -s #{ deploy_to }/shared/config/database.yml #{ current_path }/config/database.yml"
+end
+
 namespace :deploy do
   desc 'Restart application'
   task :restart do
