@@ -17,7 +17,7 @@ server '37.139.8.54', user: 'rails', roles: %w{web app db}, primary: true
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
 
 # don't try and infer something as important an environment from stage name
-set :rails_env, :production
+set :rails_env, :staging
 
 # number of unicorn workers, this will be reflected in
 # the unicorn.rb and the monit configs
