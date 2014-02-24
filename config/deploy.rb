@@ -62,6 +62,8 @@ namespace :deploy do
       # Your restart mechanism here, for example:
       # execute :touch, release_path.join('tmp/restart.txt')
     end
+    
+    invoke 'unicorn:reload'
   end
 
   task :setup_config do
@@ -80,5 +82,4 @@ namespace :deploy do
       # end
     end
   end
-
 end
