@@ -67,7 +67,7 @@ namespace :deploy do
       # execute :touch, release_path.join('tmp/restart.txt')
     end
     
-    invoke 'unicorn:reload'
+    # invoke 'unicorn:reload'
   end
 
   task :setup_config do
