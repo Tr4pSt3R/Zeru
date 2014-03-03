@@ -1,3 +1,9 @@
+== DEPLOYMENT
+	i. $ git add .
+	ii. $ git commit -m "Chore: Clean up database.yml config file"
+	iii. $ git push origin master
+	  iv. $ bundle exec cap staging deploy
+
 == README
 
 This README would normally document whatever steps are necessary to get the
