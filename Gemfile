@@ -10,6 +10,7 @@ gem 'net-ssh', '2.7.0'
 gem 'mysql2'
 
 gem 'less-rails'
+gem 'haml'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
