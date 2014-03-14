@@ -1,44 +1,41 @@
-%header.jumbotron
-  .head1
-    Memoly
-  %h2.subhead.text-muted
-    Driving persistency of knowledge through exposure
+.jumbotron
+  .container
+    %h1
+      Water
+    %h2.text-muted
+      Driving persistency of knowledge through exposure
 
-  .center-block
-    = render template: "alpha_users/new"
+.container.marketing
+  .row.featurette
+    .col-sm-7.col-md-7
+      %h2.featurette-heading
+        Choose A Time
+      %span.text-muted Convenience
+      %p.lead
+        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+    .col-sm-5.col-md-5
+      = image_tag "set-revision-time.png", class: "featurette-image img-responsive"
 
-.row
-  .col-xs-12.col-sm-12.col-md-12.col-lg-12
-    %iframe{  :width => "50%", 
-              :height => "400em", 
-              :class => "center",
-              :src => "http://www.youtube.com/embed/E2YP8Ln1MNU?html5=1", 
-              :frameborder => "0", 
-              :align => "middle", 
-              :allowfullscreen => true }
+  %hr.featurette-divider
 
-.row
-  .col-lg-12
-    %h2#how_it_works.centerise_text.text-muted
-      How it works...
-.row
-  .col-xs-4.col-sm-4.col-md-4.col-lg-4
-    .large_feature_thumbnail
-      = image_tag "set-revision-time.png", id: "summarise_time"
-      .caption
-        %h3.centerise_text.text-muted 
-          Choose A Time To Revise
+  .row.featurette
+    .col-sm-5.col-md-5
+      = image_tag "add-notes.png", class: "featurette-image img-responsive"
+    .col-sm-7.col-md-7
+      %h2.featurette-heading
+        Add Condensed Class Notes
+      %span.text-muted A Time
+      %p.lead
+        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 
-  .col-xs-4.col-sm-4.col-md-4.col-lg-4
-    .large_feature_thumbnail
-      = image_tag "add-notes.png", id: "summarise_notes"
-      .caption
-        %h3.centerise_text.text-muted 
-          Add Condensed Class Notes
-
-  .col-xs-4.col-sm-4.col-md-4.col-lg-4
-    .large_feature_thumbnail
-      = image_tag "spaced-icon.png", id: "summarise_space"
-      .caption
-        %h3.centerise_text.text-muted
-          Receive Scientifically-spaced Revision on any device
+  %hr.featurette-divider
+  
+  .row.featurette
+    .col-sm-7.col-md-7
+      %h2.featurette-heading
+        Receive Scientifically-spaced Revision on any device
+      %span.text-muted A Time
+      %p.lead
+        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+    .col-sm-5.col-md-5
+      = image_tag "spaced-icon.png", class: "featurette-image img-responsive"
