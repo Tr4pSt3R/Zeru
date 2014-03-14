@@ -1,0 +1,27 @@
+!!!
+%html
+  %head
+    %title Memoly
+    = stylesheet_link_tag "application", media: "all", :"data-turbolinks-track" => true
+    = javascript_include_tag "application", :"data-turbolinks-track" => true
+    = csrf_meta_tags
+
+  %body  
+    = yield
+
+    #footer
+      .col-lg-12
+        %ul.list-inline.center
+          %li
+            &copy;Memoly 2014
+          / %li
+          /   What's Memoly?
+          / %li 
+          /   The Team
+          / %li
+          /   Our Privacy Policy
+          / %li
+          /   Terms of Use
+          / %li 
+          /   Blog
+          

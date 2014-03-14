@@ -1,4 +1,5 @@
 Zeru::Application.routes.draw do
+  get "info/team"
   root "alpha_users#index"
   
   resources :alpha_users
