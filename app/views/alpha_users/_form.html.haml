@@ -11,14 +11,10 @@
             = msg
   / end of error report
 
-  %form{ class: "form", role: "form" }
-    .row
-      .col-lg-6
-        .form-group
-          = f.email_field :email, class: "form-control", 
-                                  type: "email", 
-                                  placeholder: "Email..."
-  
-    .col-lg-6
-      .form-group
-        = f.submit "Remind Me...", class: "btn btn-primary"
+
+  .input-group
+    = f.email_field :email, class:        "form-control", 
+                            type:         "email", 
+                            placeholder:  "Email..."
+    %span.input-group-btn
+      = f.submit "Remind Me...", class: "btn btn-cta"
