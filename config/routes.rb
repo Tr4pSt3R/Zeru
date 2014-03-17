@@ -1,5 +1,8 @@
 Zeru::Application.routes.draw do
-  get "info/team"
+  get "team",    to: "info#team"
+  get "privacy", to: "info#privacy"
+  get "terms", to: "info#terms"
+
   root "alpha_users#index"
   
   resources :alpha_users
