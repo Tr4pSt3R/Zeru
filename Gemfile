@@ -11,6 +11,8 @@ gem 'mysql2'
 
 gem 'less-rails'
 gem 'haml'
+gem 'capybara', '~> 2.2.1'
+gem 'launchy', '~> 2.1.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

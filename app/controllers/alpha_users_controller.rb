@@ -30,7 +30,7 @@ class AlphaUsersController < ApplicationController
 
     respond_to do |format|
       if @alpha_user.save
-        format.html { redirect_to @alpha_user, notice: 'Alpha user was successfully created.' }
+        format.html { redirect_to @alpha_user, notice: 'Thank You for your showing your interest' }
         format.json { render action: 'show', status: :created, location: @alpha_user }
       else
         format.html { render action: 'new' }
