@@ -20,8 +20,8 @@ module Zeru
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    # config.less.paths << "#{Rails.root}/apps/assets/stylesheets"
-    # config.less.paths << "#{Rails.root}/app/assets/fonts"
-    # config.less.compress = true
+    config.less.paths << "#{Rails.root}/apps/assets/stylesheets"
+    config.less.paths << "#{Rails.root}/app/assets/fonts"
+    config.less.compress = true
   end
 end
