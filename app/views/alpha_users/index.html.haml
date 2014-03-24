@@ -13,49 +13,52 @@
   .row
     .col-xs-12.col-sm-12.col-md-12.col-lg-12
       .center-block
-        / %iframe{  :width => "100%", 
-        /           :height => "400em", 
-        /           :class => "center",
-        /           :src => "http://www.youtube.com/embed/E2YP8Ln1MNU?html5=1", 
-        /           :frameborder => "0", 
-        /           :align => "middle", 
-        /           :allowfullscreen => true }
+        %iframe{  :width => "100%", 
+                  :height => "400em", 
+                  :class => "center",
+                  :src => "http://www.youtube.com/embed/E2YP8Ln1MNU?html5=1", 
+                  :frameborder => "0", 
+                  :align => "middle", 
+                  :allowfullscreen => true }
 
 %hr
 
 .container.marketing
   .row.featurette
-    .col-xs-7.col-sm-7.col-md-7.col-lg-7
-      %h2.featurette-heading
-        Choose A Time
-      %span.text-muted 
-        To 
-      %p.lead
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
-    .col-xs-5.col-sm-5.col-md-5.col-lg-5
-      = image_tag "set-revision-time.png", class: "featurette-image img-responsive"
+    #choose-a-time
+      .col-xs-7.col-sm-7.col-md-7.col-lg-7
+        %h2.featurette-heading
+          Choose A Time
+        %span.text-muted 
+          To 
+        %p.lead
+          Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+      .col-xs-5.col-sm-5.col-md-5.col-lg-5
+        = image_tag "set-revision-time.png", class: "featurette-image img-responsive pull-left"
 
   %hr.featurette-divider
 
   .row.featurette
-    .col-xs-5.col-sm-5.col-md-5.col-lg-5
-      = image_tag "add-notes.png", class: "featurette-image img-responsive"
-    .col-xs-7.col-sm-7.col-md-7.col-lg-7
-      %h2.featurette-heading
-        Add Condensed Class Notes
-      %span.text-muted A Time
-      %p.lead
-        Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
+    #add-notes
+      .col-xs-5.col-sm-5.col-md-5.col-lg-5
+        = image_tag "add-notes.png", class: "featurette-image img-responsive pull-right"
+      .col-xs-7.col-sm-7.col-md-7.col-lg-7
+        %h2.featurette-heading
+          Add Condensed Class Notes
+        %span.text-muted A Time
+        %p.lead
+          Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.
 
   %hr.featurette-divider
   
   .row.featurette
-    .col-xs-7.col-sm-7.col-md-7.col-lg-7
-      %h2.featurette-heading
-        Spaced Repetition
-      %span.text-muted 
-        Receive your scientifically-spaced revision notes on any device
-      %p.lead
-        Memoly stirs you up by way of a timely reminder. The algorithm will grow to understand your learning habits. Over time it will become an extension of your centre of intelligence. Don't take our word for it, but do thank us for it.
-    .col-xs-5.col-sm-5.col-md-5.col-lg-5
-      = image_tag "spaced-icon.png", class: "featurette-image img-responsive"
+    #spaced-repetition
+      .col-xs-7.col-sm-7.col-md-7.col-lg-7
+        %h2.featurette-heading
+          Spaced Repetition
+        %span.text-muted 
+          Receive your scientifically-spaced revision notes on any device
+        %p.lead
+          Memoly stirs you up by way of a timely reminder. The algorithm will grow to understand your learning habits. Over time it will become an extension of your centre of intelligence. Don't take our word for it, but do thank us for it.
+      .col-xs-5.col-sm-5.col-md-5.col-lg-5
+        = image_tag "spaced-icon.png", class: "featurette-image img-responsive pull-left"
