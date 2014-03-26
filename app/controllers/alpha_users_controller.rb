@@ -4,7 +4,7 @@ class AlphaUsersController < ApplicationController
   # GET /alpha_users
   # GET /alpha_users.json
   def index
-    @alpha_users = AlphaUser.all
+    # @alpha_users = AlphaUser.all
     @alpha_user = AlphaUser.new
   end
 
@@ -30,10 +30,10 @@ class AlphaUsersController < ApplicationController
 
     respond_to do |format|
       if @alpha_user.save
-        format.html { redirect_to @alpha_user, notice: 'Thank You for your showing your interest' }
-        format.json { render action: 'show', status: :created, location: @alpha_user }
+        format.html { redirect_to root_url, notice: 'Thank You for your showing your interest' }
+        format.json { render action: 'index', status: :created, location: @alpha_user }
       else
-        format.html { render action: 'new' }
+        format.html { render action: 'index' }
         format.json { render json: @alpha_user.errors, status: :unprocessable_entity }
       end
     end

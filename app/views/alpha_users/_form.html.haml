@@ -2,13 +2,17 @@
   - if @alpha_user.errors.any?
     #error_explanation
       %h2
-        = pluralize(@alpha_user.errors.count, "error") 
-        prohibited this User from being saved:  
+        =# pluralize(@alpha_user.errors.count, "error") 
+        / prohibited this User from being saved:  
 
-      %ul
-        - @alpha_user.errors.full_messages.each do |msg|
-          %li
-            = msg
+      / %ul.alert.alert-warn.alert-dismissable
+      /   - @alpha_user.errors.full_messages.each do |msg|
+      /     %li
+      /       = msg
+
+      - @alpha_user.errors.full_messages.each do |msg|
+        .flash.alert.alert-warning.alert-dismissable
+          = msg
   / end of error report
 
 
