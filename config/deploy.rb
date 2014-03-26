@@ -68,7 +68,7 @@ namespace :deploy do
       # invoke 'unicorn:reload'
     end
     
-    invoke 'unicorn:reload'
+    # invoke 'unicorn:reload'
   end
 
   task :setup_config do
