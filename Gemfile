@@ -14,6 +14,7 @@ gem 'haml'
 gem 'capybara', '~> 2.2.1'
 gem 'launchy',  '~> 2.1.2'
 gem 'unicorn',  '~> 4.8.2'
+gem 'unicorn-rails', '~> 1.1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
