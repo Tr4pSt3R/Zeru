@@ -240,6 +240,7 @@ DEPENDENCIES
   haml
   jbuilder (~> 1.2)
   jquery-rails
+  kgio (~> 2.9.2)
   launchy (~> 2.1.2)
   less-rails
   mysql2
