@@ -49,7 +49,7 @@ group :development do
 	gem 'capistrano-rvm'
 	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'guard'
-	# gem 'capistrano3-unicorn'
+	gem 'capistrano3-unicorn'
 end
 
 group :development, :test do
