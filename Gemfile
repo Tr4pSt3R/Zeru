@@ -13,9 +13,9 @@ gem 'less-rails'
 gem 'haml'
 gem 'capybara', 		'~> 2.2.1'
 gem 'launchy',  		'~> 2.1.2'
-gem 'unicorn',  		'~> 4.8.2'
-gem 'unicorn-rails', 	'~> 1.1.0'
-gem 'kgio', 			'~> 2.9.2'
+# gem 'unicorn',  		'~> 4.8.2'
+# gem 'unicorn-rails', 	'~> 1.1.0'
+# gem 'kgio', 			'~> 2.9.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -52,7 +52,7 @@ group :development do
 	gem 'capistrano-rvm'
 	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'guard'
-	gem 'capistrano3-unicorn'
+	# gem 'capistrano3-unicorn'
 end
 
 group :development, :test do
