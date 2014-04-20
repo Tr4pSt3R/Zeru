@@ -234,7 +234,7 @@ DEPENDENCIES
   capistrano-rvm
   capybara (~> 2.2.1)
   coffee-rails (~> 4.0.0)
-  devise
+  devise (~> 3.2.2)
   guard
   haml
   jbuilder (~> 1.2)
