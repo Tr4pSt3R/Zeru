@@ -17,7 +17,7 @@ gem 'launchy',  		'~> 2.1.2'
 # gem 'unicorn-rails', 	'~> 1.1.0'
 # gem 'kgio', 			'~> 2.9.2'
 gem 'devise',           '~> 3.2.2'
-# gem 'rails_admin'
+gem 'rails_admin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
