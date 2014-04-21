@@ -1,6 +1,5 @@
 Zeru::Application.routes.draw do
-  
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  mount RailsAdmin::Engine => '/backstage', :as => 'rails_admin'
   devise_for :users
 
   get "team",    to: "info#team"
