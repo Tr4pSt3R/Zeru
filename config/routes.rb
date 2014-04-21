@@ -1,12 +1,12 @@
 Zeru::Application.routes.draw do
+  
   devise_for :users
 
   get "team",    to: "info#team"
   get "privacy", to: "info#privacy"
-  get "terms", to: "info#terms"
+  get "terms",   to: "info#terms"
 
   root "alpha_users#index"
-  
   resources :alpha_users, except: [ :show ]
 
   # The priority is based upon order of creation: first created -> highest priority.
