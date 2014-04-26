@@ -1,5 +1,5 @@
 set :stage, :staging
-set :branch, "master"
+set :branch, ENV['BRANCH'] || :master
 
 # used in case we're deplying multiple versions of the same 
 # app side by side, Also provides quick sanity checks when 
