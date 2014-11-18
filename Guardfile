@@ -1,6 +1,11 @@
 # A sample Guardfile
 # More info at https://github.com/guard/guard#readme
 
+guard 'rails' do
+  watch('Gemfile.lock')
+  watch(%r{^(config|lib)/.*})
+end
+
 guard 'rspec', :cli => "--drb", :all_on_start => false, :cmd => 'bundle exec rspec --color -f html -o ./tmp/spec_coverage.html', :launchy => './tmp/spec_coverage.html', :notification => true do
 
   watch(%r{^spec/.+_spec\.rb$})

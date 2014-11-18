@@ -18,6 +18,9 @@ gem 'launchy',  		'~> 2.1.2'
 # gem 'kgio', 			'~> 2.9.2'
 gem 'devise',           '~> 3.2.2'
 gem 'rails_admin'
+gem 'timecop'
+gem 'guard-rails', require: false
+gem 'fabricator'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
