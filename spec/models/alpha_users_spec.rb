@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe AlphaUser do
+RSpec.describe AlphaUser do
   
   #validations
-  it { should validate_uniqueness_of(:email) }
+  it { should validate_uniqueness_of(:email) } 
 end
