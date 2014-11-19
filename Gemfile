@@ -21,6 +21,8 @@ gem 'rails_admin'
 gem 'timecop'
 gem 'guard-rails', require: false
 gem 'fabrication'
+gem 'annotate', '~> 2.6.5'
+gem 'faker'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
