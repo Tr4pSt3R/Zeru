@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: memoids
+#
+#  id         :integer          not null, primary key
+#  content    :text
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 require 'spec_helper'
 
 RSpec.describe Memoid, type: :model do

@@ -1,3 +1,13 @@
+# == Schema Information
+#
+# Table name: memoids
+#
+#  id         :integer          not null, primary key
+#  content    :text
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Memoid < ActiveRecord::Base	
   # Associations
   has_many :release_dates
@@ -7,6 +17,12 @@ class Memoid < ActiveRecord::Base
 
   # Validations
   validates :content, presence: true
+
+  # Scope
+  scope :due_today, -> do 
+    joins(:release_dates).where( "delivery_date = ?", Date.today )
+  end
+
 
   def next_delivery_date
     self.release_dates.first.delivery_date
