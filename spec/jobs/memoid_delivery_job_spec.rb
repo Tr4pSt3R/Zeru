@@ -1,8 +1,8 @@
 require 'spec_helper' 
 
-RSpec.describe "Memoid Release Job" do 
+RSpec.describe "Memoid Release Job", type: :model do 
   describe "#scheduling" do 
-    it "automatically scehdules a delivery for tomorrow" do 
+    it "automatically schedules a delivery for tomorrow" do 
       memoid = Memoid.create content: "Counted it all joy!"
       tomorrow = Date.today.next_day.strftime("%Y-%m-%d")
 
@@ -11,11 +11,23 @@ RSpec.describe "Memoid Release Job" do
   end
 
   describe "when memoid is due for delivery today" do 
-  	it "schedules for delivery today" do
-	  # memoid = Memoid.create content: "Count it all joy!"
-	  # ReleaseDate.create delivery_date: Date.today.next_day, memoid_id: memoid.id
+  	context "#today" do 
+  	  it "collects due memoid(s)" do 
+		memoid_1 = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
+		memoid_2 = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
 
-	  # expect(memoid.next_delivery_date).to eq( Date.today.next_day.strftime("%Y-%m-%d") )
-    end	
+  	  	3.times do 
+  	  	  memoid = Fabricate :memoid, release_dates: [ Fabricate(:due_tomorrow) ]
+  	  	end
+
+  	  	expect( Memoid.due_today ).to eq( [ memoid_1, memoid_2 ] )
+	  end
+
+  	  it "sends an email" do
+  	    2.times{ Fabricate :memoid, release_dates: [ Fabricate(:due_today) ] }
+
+  	    
+	  end	
+  	end
   end
 end
