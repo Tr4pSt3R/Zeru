@@ -9,10 +9,11 @@ class Memoid < ActiveRecord::Base
   validates :content, presence: true
 
   def next_delivery_date
-  	self.release_dates.first.delivery_date
+    self.release_dates.first.delivery_date
   end
-
-  def create_release_dates
-    self.release_dates << ( ReleaseDate.create delivery_date: Date.today.next_day )
-  end
+  
+  private 
+    def create_release_dates
+      self.release_dates << ( ReleaseDate.create delivery_date: Date.today.next_day )
+    end
 end
