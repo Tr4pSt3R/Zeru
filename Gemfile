@@ -20,7 +20,7 @@ gem 'devise',           '~> 3.2.2'
 gem 'rails_admin'
 gem 'timecop'
 gem 'guard-rails', require: false
-gem 'fabricator'
+gem 'fabrication'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
