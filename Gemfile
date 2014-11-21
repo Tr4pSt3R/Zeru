@@ -27,6 +27,9 @@ gem 'faker'
 # Async processing of background jobs
 gem 'sidekiq'
 
+# CRON jobs in Ruby
+gem 'whenever', require: false
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
