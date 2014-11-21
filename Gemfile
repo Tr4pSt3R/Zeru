@@ -24,6 +24,9 @@ gem 'fabrication'
 gem 'annotate', '~> 2.6.5'
 gem 'faker'
 
+# Async processing of background jobs
+gem 'sidekiq'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -68,6 +71,7 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'rspec-sidekiq'
 end
 
 # Use ActiveModel has_secure_password
