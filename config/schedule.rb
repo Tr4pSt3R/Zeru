@@ -19,6 +19,8 @@
 
 # Learn more: http://github.com/javan/whenever
 
+set :output, "./log/cron.log"
+
 every :day, :at => '08:00am' do 
-  runner "Memoid.release_ripe_memoids"
+  runner "Cron.run"
 end
