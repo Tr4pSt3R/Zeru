@@ -23,6 +23,14 @@ class Memoid < ActiveRecord::Base
     joins(:release_dates).where( "delivery_date = ?", Date.today )
   end
 
+  # prepare 'ripe' memoids for delivery
+  def self.fetch_ripe_memoids
+    # collect ids of ripe memoids
+    ripe_memoids = Memoid.due_today(&:id)
+
+    # Send them out for delivery
+    ReleaseWorker.perform_async( ripe_memoids )
+  end
 
   def next_delivery_date
     self.release_dates.first.delivery_date
