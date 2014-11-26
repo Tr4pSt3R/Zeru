@@ -31,6 +31,8 @@ GEM
       rake (>= 0.8.7)
     arel (4.0.2)
     bcrypt (3.1.9)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bourne (1.5.0)
       mocha (>= 0.13.2, < 0.15)
     builder (3.1.4)
@@ -69,6 +71,7 @@ GEM
     coffee-script-source (1.8.0)
     commonjs (0.2.7)
     connection_pool (2.1.0)
+    debug_inspector (0.0.2)
     devise (3.2.4)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -280,6 +283,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.6.5)
+  binding_of_caller
   bourne
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
@@ -300,6 +304,7 @@ DEPENDENCIES
   less-rails
   mysql2
   net-ssh (= 2.7.0)
+  pry
   rails (= 4.0.2)
   rails_admin
   rspec-rails (~> 3.0.0.beta)

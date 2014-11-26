@@ -23,6 +23,7 @@ gem 'guard-rails', require: false
 gem 'fabrication'
 gem 'annotate', '~> 2.6.5'
 gem 'faker'
+gem 'pry'
 
 # Async processing of background jobs
 gem 'sidekiq'
@@ -65,6 +66,7 @@ group :development do
 	gem 'capistrano-rvm'
 	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'guard'
+  gem 'binding_of_caller'
 	# gem 'capistrano3-unicorn'
 end
 
