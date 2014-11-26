@@ -38,7 +38,6 @@ class Memoid < ActiveRecord::Base
   
   private 
     def create_release_dates
-      self.release_dates << ( ReleaseDate.create delivery_date: Date.today + 1
-   )
+      self.release_dates << ( ReleaseDate.create delivery_date: Date.today + 1)
     end
 end
