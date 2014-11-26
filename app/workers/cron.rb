@@ -1,7 +1,7 @@
 class Cron
   def self.run
     if Time.now.hour == 8
-      Memoid.fetch_ripe_memoids
+      Memoid.due_today
     end
   end
 end
