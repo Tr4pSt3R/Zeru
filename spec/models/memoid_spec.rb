@@ -18,4 +18,13 @@ RSpec.describe Memoid, type: :model do
   context "#validations" do
   	it { should validate_presence_of(:content) }
   end
+
+  # scope
+  context "due today" do 
+  	it "fetches all memoids due for Today" do
+  	  memoid = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
+
+      expect(Memoid.due_today).to eq([memoid])
+  	end
+  end
 end
