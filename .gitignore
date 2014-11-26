@@ -17,3 +17,4 @@
 
 # Others
 config/database.yml
+dump.rdb
