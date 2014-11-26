@@ -20,17 +20,14 @@ class Memoid < ActiveRecord::Base
 
   # Scope
   scope :due_today, -> do 
-    joins(:release_dates).where( "delivery_date = ?", Date.today )
+    joins(:release_dates).where( "delivery_date = ?", Date.today.strftime )
   end
 
-  # prepare 'ripe' memoids for delivery
-  def self.fetch_ripe_memoids
-    # collect ids of ripe memoids
-    ripe_memoids = Memoid.due_today(&:id)
-
-    # Send them out for delivery
-    ReleaseWorker.perform_async( ripe_memoids )
-  end
+  # # prepare 'ripe' memoids for delivery
+  # def self.fetch_ripe_memoids
+  #   # collect ids of ripe memoids
+  #   ripe_memoids = Memoid.due_today.map(&:id)
+  # end
 
   def next_delivery_date
     self.release_dates.first.delivery_date
