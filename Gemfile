@@ -75,6 +75,9 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'rspec-sidekiq'
+
+  # Add Test Spies to Mocha
+  gem 'bourne'
 end
 
 # Use ActiveModel has_secure_password

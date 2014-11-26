@@ -31,6 +31,8 @@ GEM
       rake (>= 0.8.7)
     arel (4.0.2)
     bcrypt (3.1.9)
+    bourne (1.5.0)
+      mocha (>= 0.13.2, < 0.15)
     builder (3.1.4)
     capistrano (3.2.1)
       i18n
@@ -124,10 +126,13 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    metaclass (0.0.1)
     method_source (0.8.2)
     mime-types (1.25.1)
     mini_portile (0.6.1)
     minitest (4.7.5)
+    mocha (0.14.0)
+      metaclass (~> 0.0.1)
     multi_json (1.10.1)
     mysql2 (0.3.16)
     nested_form (0.3.2)
@@ -275,6 +280,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.6.5)
+  bourne
   capistrano (~> 3.1)
   capistrano-bundler (~> 1.1.2)
   capistrano-nc (~> 0.1.0)
