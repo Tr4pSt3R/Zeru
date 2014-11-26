@@ -2,8 +2,7 @@ require 'spec_helper'
 
 RSpec.describe 'Cron' do 
   before do 
-  	Memoid.stub(:fetch_ripe_memoids)
-  	# ReleaseWorker.stub(:perform_async).with([memoid.id])
+    Memoid.stubs(:due_today)
   end
 
   after :all do 
@@ -17,8 +16,7 @@ RSpec.describe 'Cron' do
 
     	Cron.run
 
-   	expect(Memoid).to have_received(:fetch_ripe_memoids)
-   	expect(ReleaseWorker).to have_received(:perform)
+   	  expect(Memoid).to have_received(:due_today)
     end
   end
 
@@ -28,21 +26,22 @@ RSpec.describe 'Cron' do
   	  Timecop.freeze( eight_am )
 
   	  Cron.run
-  	  puts "Number of ripe memoids: #{Memoid.fetch_ripe_memoids}"
 
-  	  expect(Memoid).to have_received(:fetch_ripe_memoids).returns(0)
-  	  # expect(ReleaseWorker).to_not have_received(:perform)
-  	  # TODO 
-  	  # $brew install redis
-  	  # expect(Memoid.fetch_ripe_memoids.size).to eq(0)
+  	  expect(Memoid).to have_received(:due_today)
+  	  expect(ReleaseWorker).to have_received(:perform).never 
   	end
   end
 
   context "something to deliver" do 
-    memoid = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
 
     it "sends an email" do 
-      MemoidMailer.stub( :memoid_delivery )
+      memoid = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
+
+      Cron.run
+
+      # binding.pry
+
+      expect(Memoid.fetch_ripe_memoids).to eq( [memoid.id] )
     end
   end
 end
