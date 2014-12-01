@@ -20,7 +20,7 @@ class Memoid < ActiveRecord::Base
 
   # Scope
   scope :due_today, -> do 
-    joins(:release_dates).where( "delivery_date = ?", Date.today.strftime )
+    joins(:release_dates).where( "delivery_date = ?", Date.today )
   end
 
   # # prepare 'ripe' memoids for delivery
