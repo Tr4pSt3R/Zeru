@@ -30,9 +30,18 @@ Zeru::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-    api_key: 'key-0c097d45e8e99f3dcfb276876d6e5176',
-    domain: 'sandbox8091fa7d1a544af0ae90aac56b02e963.mailgun.org'
+  # config.action_mailer.delivery_method = :mailgun
+  # config.action_mailer.mailgun_settings = {
+  #   api_key: 'key-0c097d45e8e99f3dcfb276876d6e5176',
+  #   domain: 'sandbox8091fa7d1a544af0ae90aac56b02e963.mailgun.org'
+  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_setitings = {
+    :authentication =: :plain,
+    :address => "smtp.mailgun.org",
+    :port => 587,
+    :domain => "sandbox8091fa7d1a544af0ae90aac56b02e963.mailgun.org",
+    :user_name => "",
+    :password => ""
   }
 end
