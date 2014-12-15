@@ -25,6 +25,9 @@ gem 'annotate', '~> 2.6.5'
 gem 'faker'
 gem 'pry'
 
+# Use MailGun for ActionMailer Mail Delivery
+gem 'mailgun_rails'
+
 # Async processing of background jobs
 gem 'sidekiq'
 
@@ -60,7 +63,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do 
+group :development do
 	gem 'capistrano', '~> 3.1'
 	gem 'capistrano-rails', '~> 1.1'
 	gem 'capistrano-rvm'
