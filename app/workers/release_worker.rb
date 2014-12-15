@@ -3,6 +3,6 @@ class ReleaseWorker
   sidekiq_options retry: false
 
   def perform
-    MemoidMailer.notification
+    MemoidMailer.notification.deliver
   end
 end
