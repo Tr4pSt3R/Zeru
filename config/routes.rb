@@ -1,5 +1,8 @@
 Zeru::Application.routes.draw do
   mount RailsAdmin::Engine => '/backstage', :as => 'rails_admin'
+
+  require 'sidekiq/web'
+  mount Sidekiq::Web, at: '/sidekiq'
   devise_for :users
 
   get "team",    to: "info#team"
