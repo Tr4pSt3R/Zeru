@@ -35,6 +35,14 @@ gem 'sidekiq'
 # CRON jobs in Ruby
 gem 'whenever', require: false
 
+# Capistrano for Deployment
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+
+# Add this if you're using rvm
+gem 'capistrano-rvm', github: "capistrano/rvm"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -65,10 +73,6 @@ group :doc do
 end
 
 group :development do
-	gem 'capistrano', '~> 3.1'
-	gem 'capistrano-rails', '~> 1.1'
-	gem 'capistrano-rvm'
-	gem 'capistrano-bundler', '~> 1.1.2'
 	gem 'guard'
   gem 'binding_of_caller'
 	# gem 'capistrano3-unicorn'
