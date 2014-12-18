@@ -1,5 +1,5 @@
 # root of our Rails application
-root = "/Users/jonesagyemang/Project/Zeru"
+root = "/home/deploy/zeru/current"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 
