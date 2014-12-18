@@ -17,7 +17,31 @@ gem 'launchy',  		'~> 2.1.2'
 # gem 'unicorn-rails', 	'~> 1.1.0'
 # gem 'kgio', 			'~> 2.9.2'
 gem 'devise',           '~> 3.2.2'
-# gem 'rails_admin'
+gem 'rails_admin'
+gem 'timecop'
+gem 'guard-rails', require: false
+gem 'fabrication'
+gem 'annotate', '~> 2.6.5'
+gem 'faker'
+gem 'pry'
+gem 'sinatra', '>= 1.3.0', :require => nil
+
+# Use MailGun for ActionMailer Mail Delivery
+gem 'mailgun_rails'
+
+# Async processing of background jobs
+gem 'sidekiq'
+
+# CRON jobs in Ruby
+gem 'whenever', require: false
+
+# Capistrano for Deployment
+gem 'capistrano', '~> 3.1.0'
+gem 'capistrano-bundler', '~> 1.1.2'
+gem 'capistrano-rails', '~> 1.1.1'
+
+# Add this if you're using rvm
+gem 'capistrano-rvm', github: "capistrano/rvm"
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -48,12 +72,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-group :development do 
-	gem 'capistrano', '~> 3.1'
-	gem 'capistrano-rails', '~> 1.1'
-	gem 'capistrano-rvm'
-	gem 'capistrano-bundler', '~> 1.1.2'
+group :development do
 	gem 'guard'
+  gem 'binding_of_caller'
 	# gem 'capistrano3-unicorn'
 end
 
@@ -63,13 +84,17 @@ end
 
 group :test do
   gem 'shoulda-matchers'
+  gem 'rspec-sidekiq'
+
+  # Add Test Spies to Mocha
+  gem 'bourne'
 end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', '~>4.6.3'
 
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development

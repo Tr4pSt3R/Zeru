@@ -17,3 +17,5 @@
 
 # Others
 config/database.yml
+dump.rdb
+/config/environments/development.rb
