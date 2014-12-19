@@ -20,7 +20,7 @@ set :deploy_to, '/home/deploy/zeru'
 # set :log_level, :debug
 
 # Default value for :pty is false
-# set :pty, true
+set :pty, true
 
 # Default value for :linked_files is []
 set :linked_files, %w{config/database.yml}
@@ -52,6 +52,21 @@ namespace :deploy do
       # within release_path do
       #   execute :rake, 'cache:clear'
       # end
+    end
+  end
+end
+
+namespace :setup do
+  desc "Symlink config files for Nginx and Unicorn"
+  task :symlink_config do
+    on roles(:app) do
+      # execute :sudo, "rm -f /etc/nginx/sites-enabled/default"
+
+      # Symbolically link app-custom Nginx config file
+      execute "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
+
+      # Symbolically link app-custom Unicorn config file
+      # execute "ln -nfs #{current_path}/config/unicorn.rb /etc/unicorn"
     end
   end
 end
