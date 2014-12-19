@@ -62,11 +62,11 @@ namespace :setup do
     on roles(:app) do
       # execute :sudo, "rm -f /etc/nginx/sites-enabled/default"
 
-      # Symbolically link app-custom Nginx config file
-      execute "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
+      # Symbolically link custom Nginx config file
+      execute :sudo, "ln -nfs #{current_path}/config/nginx.conf /etc/nginx/sites-enabled/#{fetch(:application)}"
 
-      # Symbolically link app-custom Unicorn config file
-      # execute "ln -nfs #{current_path}/config/unicorn.rb /etc/unicorn"
+      # Symbolically link custom Unicorn config file
+      execute :sudo, "ln -nfs #{current_path}/config/unicorn_init.sh /etc/init.d/unicorn_#{fetch(:application)}"
     end
   end
 end
