@@ -8,13 +8,11 @@ Given(/^that I have previously added some notes$/) do |table|
   Memoid.create! content: "mean is measure of average", user_id: user.id
 end
 
-Given(/^one of them is due for delivery today$/) do
+When(/^one of them is due for delivery today$/) do
   memoid = Memoid.first
-
   memoid.release_dates << (ReleaseDate.new delivery_date: Date.today)
 end
 
-
 Then(/^I should receive an email with this note$/) do
-  pending # express the regexp above with the code you wish you had
+  
 end
