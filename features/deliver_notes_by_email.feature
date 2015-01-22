@@ -13,5 +13,4 @@ Scenario: Deliver note
     |  5 | mean is measure of average          | 22/02/2015     |
 
   When one of them is due for delivery today
-  And I check my email inbox
-  Then I should see that I have a new note
+  Then I should receive an email with this note

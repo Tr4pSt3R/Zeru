@@ -14,10 +14,7 @@ Given(/^one of them is due for delivery today$/) do
   memoid.release_dates << (ReleaseDate.new delivery_date: Date.today)
 end
 
-When(/^I check my email inbox$/) do
-  pending # express the regexp above with the code you wish you had
-end
 
-Then(/^I should see that I have a new note$/) do
+Then(/^I should receive an email with this note$/) do
   pending # express the regexp above with the code you wish you had
 end

@@ -85,7 +85,10 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'rspec-sidekiq'
-  gem 'cucumber-rails', require: false
+
+  # test email specs
+  gem 'email_spec'
+
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 
