@@ -5,10 +5,13 @@ Feature: Deliver bite-sized note by email
 
 Scenario: Deliver note
   Given that I have previously added some notes
-    | id |             note                   |    date     |
-    |  1 | abelian groups is commutative      |             |
+    | id | note                                | delivery date  |
+    |  1 | abelian groups are commutative      | 22/01/2015     |
+    |  2 | the dot is a meta-character         | 21/01/2015     |
+    |  3 | abelian groups are commutative      | 01/01/2015     |
+    |  4 | gherkin has a plain english syntax  | 02/01/2015     |
+    |  5 | mean is measure of average          | 22/02/2015     |
 
-  And one of them, at least, is due for delivery today
-  When the note is delivered
+  When one of them is due for delivery today
   And I check my email inbox
   Then I should see that I have a new note
