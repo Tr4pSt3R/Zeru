@@ -8,8 +8,9 @@
 #  updated_at :datetime
 #
 
-class Memoid < ActiveRecord::Base	
+class Memoid < ActiveRecord::Base
   # Associations
+  belongs_to :user
   has_many :release_dates
 
   # Callbacks
@@ -19,7 +20,7 @@ class Memoid < ActiveRecord::Base
   validates :content, presence: true
 
   # Scope
-  scope :due_today, -> do 
+  scope :due_today, -> do
     joins(:release_dates).where( "delivery_date = ?", Date.today )
   end
 
@@ -32,8 +33,8 @@ class Memoid < ActiveRecord::Base
   def next_delivery_date
     self.release_dates.first.delivery_date
   end
-  
-  private 
+
+  private
     def create_release_dates
       self.release_dates << ( ReleaseDate.create delivery_date: Date.today + 1)
     end
