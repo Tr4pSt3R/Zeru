@@ -85,6 +85,9 @@ end
 group :test do
   gem 'shoulda-matchers'
   gem 'rspec-sidekiq'
+  gem 'cucumber-rails', require: false
+  # database_cleaner is not required, but highly recommended
+  gem 'database_cleaner'
 
   # Add Test Spies to Mocha
   gem 'bourne'
