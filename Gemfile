@@ -89,6 +89,7 @@ group :test do
   # test email specs
   gem 'email_spec'
 
+  gem 'cucumber-rails', require: false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 
