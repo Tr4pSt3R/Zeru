@@ -8,7 +8,7 @@ Scenario: Deliver note
     | id | note                                | delivery date  |
     |  1 | abelian groups are commutative      | 22/01/2015     |
     |  2 | the dot is a meta-character         | 21/01/2015     |
-    |  3 | abelian groups are commutative      | 01/01/2015     |
+    |  3 | latex is for math typsetting        | 01/01/2015     |
     |  4 | gherkin has a plain english syntax  | 02/01/2015     |
     |  5 | mean is measure of average          | 22/02/2015     |
 
