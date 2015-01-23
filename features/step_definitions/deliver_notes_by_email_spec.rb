@@ -15,4 +15,5 @@ end
 
 Then(/^I should receive an email with this note$/) do
   
+  expect(MemoidMailer).to have_received(:deliver)
 end
