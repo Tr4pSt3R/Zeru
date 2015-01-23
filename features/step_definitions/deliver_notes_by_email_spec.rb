@@ -14,6 +14,8 @@ When(/^one of them is due for delivery today$/) do
 end
 
 Then(/^I should receive an email with this note$/) do
-  
+  # clear mailing queue
+  reset_mailer
+
   expect(MemoidMailer).to have_received(:deliver)
 end

@@ -5,6 +5,8 @@
 # files.
 
 require 'cucumber/rails'
+require 'email_spec'
+require 'email_spec/cucumber'
 
 # Capybara defaults to CSS3 selectors rather than XPath.
 # If you'd prefer to use XPath, just uncomment this line and adjust any
@@ -56,3 +58,7 @@ end
 # See https://github.com/cucumber/cucumber-rails/blob/master/features/choose_javascript_database_strategy.feature
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
+
+# Commented out for now. Can be added it Email_Spec APIs are not recognised
+# include EmailSpec::Helpers
+# include EmailSpec::Matchers
