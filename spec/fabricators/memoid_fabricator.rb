@@ -8,6 +8,10 @@
 #  updated_at :datetime
 #
 
-Fabricator( :memoid) do 
+Fabricator( :memoid) do
   content { Faker::Lorem.paragraph }
+end
+
+Fabricator(:ripe_memoid, from: :memoid) do
+  release_dates {[ReleaseDate.new(delivery_date: Date.today)]}
 end
