@@ -6,10 +6,12 @@
 #  content    :text
 #  created_at :datetime
 #  updated_at :datetime
+#  user_id    :integer
 #
 
 Fabricator( :memoid) do
   content { Faker::Lorem.paragraph }
+  user    { Fabricate :user }
 end
 
 Fabricator(:ripe_memoid, from: :memoid) do
