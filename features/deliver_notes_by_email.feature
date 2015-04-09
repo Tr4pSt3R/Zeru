@@ -19,11 +19,7 @@ Feature: Deliver bite-sized note by email
 Scenario: Deliver note
   Given that I have previously added some notes
     | id | note                                | delivery date  |
-    |  1 | abelian groups are commutative      | 22/01/2015     |
-    |  2 | the dot is a meta-character         | 21/01/2015     |
-    |  3 | latex is for math typsetting        | 01/01/2015     |
-    |  4 | gherkin has a plain english syntax  | 02/01/2015     |
-    |  5 | mean is measure of average          | 22/02/2015     |
+    |  1 | abelian groups are commutative      | tomorrow       |
 
-  When one of them is due for delivery today
+  When the note is due for delivery
   Then I should receive an email with this note
