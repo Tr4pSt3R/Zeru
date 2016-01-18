@@ -3,6 +3,7 @@ class MemoidMailer < ActionMailer::Base
 
   def notification
   	@memoids = Memoid.due_today
+
   	email = mail to: "mightyj@hotmail.co.uk", subject: "Memoly::Today"
   end
 end

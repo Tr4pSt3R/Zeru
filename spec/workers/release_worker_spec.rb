@@ -1,8 +1,8 @@
-require 'spec_helper' 
+require 'spec_helper'
 
-RSpec.describe ReleaseWorker do 
-  describe "#scheduling" do 
-    it "automatically schedules a delivery for tomorrow" do 
+RSpec.describe ReleaseWorker do
+  describe "#scheduling" do
+    it "automatically schedules a delivery for tomorrow" do
       memoid = Memoid.create content: "Counted it all joy!"
       tomorrow = Date.today.next_day.strftime("%Y-%m-%d")
 
@@ -10,13 +10,13 @@ RSpec.describe ReleaseWorker do
     end
   end
 
-  describe "#collection of memoids due" do 
-  	context "#today" do 
-  	  it "collects due memoid(s)" do 
+  describe "#collection of memoids due" do
+  	context "#today" do
+  	  it "collects due memoid(s)" do
     		memoid_1 = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
     		memoid_2 = Fabricate :memoid, release_dates: [ Fabricate(:due_today) ]
 
-  	  	3.times do 
+  	  	3.times do
   	  	  memoid = Fabricate :memoid, release_dates: [ Fabricate(:due_tomorrow) ]
   	  	end
 
@@ -25,15 +25,9 @@ RSpec.describe ReleaseWorker do
 
   	  it "sends an email" do
   	    2.times{ Fabricate :memoid, release_dates: [ Fabricate(:due_today) ] }
-	    end	
-  	end
-  end
 
-  describe "#enqueue" do 
-    it "should have enqueued jobs" do 
-      # ReleaseWorker.perform_async "Job", true
-      ReleaseWorker.perform_async 
-      expect( ReleaseWorker ).to have_enqueued_job('Job', true)
-    end
+        expect{ ReleaseWorker.perform_async }.to change(ReleaseWorker.jobs, :size).by(1)
+	    end
+  	end
   end
 end
