@@ -1,8 +1,9 @@
 class MemoidMailer < ActionMailer::Base
   default :from => "jones.k.agyemang@gmail.com"
 
-  def notification(email)
+  def notification
   	@memoids = Memoid.due_today
-  	email = mail to: email, subject: "Memoly::Today"
+
+  	email = mail to: "mightyj@hotmail.co.uk", subject: "Memoly::Today"
   end
 end

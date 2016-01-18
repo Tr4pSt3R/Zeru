@@ -11,7 +11,7 @@
 
 Fabricator( :memoid) do
   content { Faker::Lorem.paragraph }
-  user    { Fabricate :user }
+  user    { Fabricate :user, email: Faker::Internet.email }
 end
 
 Fabricator(:ripe_memoid, from: :memoid) do
