@@ -1,4 +1,5 @@
 Zeru::Application.routes.draw do
+  get "home/index"
   mount RailsAdmin::Engine => '/backstage', :as => 'rails_admin'
 
   require 'sidekiq/web'
@@ -9,10 +10,11 @@ Zeru::Application.routes.draw do
   get "privacy", to: "info#privacy"
   get "terms",   to: "info#terms"
 
-  root "alpha_users#index"
+  root "home#index"
   resources :alpha_users, except: [ :show ]
 
   resources :memoids
+  resources :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

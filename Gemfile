@@ -24,7 +24,6 @@ gem 'guard-rails', require: false
 gem 'fabrication'
 gem 'annotate', '~> 2.6.5'
 gem 'faker'
-gem 'pry'
 gem 'sinatra', '>= 1.3.0', :require => nil
 
 # Use MailGun for ActionMailer Mail Delivery
@@ -76,6 +75,7 @@ end
 group :development do
 	gem 'guard'
   gem 'binding_of_caller'
+  gem 'pry'
 	# gem 'capistrano3-unicorn'
 end
 

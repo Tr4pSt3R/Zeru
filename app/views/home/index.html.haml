@@ -1,0 +1,6 @@
+=# render template: 'memoids/new', locals: { memoid: Memoid.new }
+= form_for(@memoid = Memoid.new) do |f|
+  = f.text_area :content
+  = f.submit
+
+=# @memoids.each{|m| puts m}
