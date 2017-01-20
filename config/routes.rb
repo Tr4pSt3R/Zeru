@@ -10,7 +10,7 @@ Zeru::Application.routes.draw do
   get "privacy", to: "info#privacy"
   get "terms",   to: "info#terms"
 
-  root "alpha_users#index"
+  root "home#index"
   resources :alpha_users, except: [ :show ]
 
   resources :memoids
