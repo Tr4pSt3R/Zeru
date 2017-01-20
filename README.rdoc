@@ -1,3 +1,4 @@
+{<img alt='Stories in Ready' src='https://badge.waffle.io/Tr4pSt3R/Zeru.png?label=ready&title=Ready' />}[https://waffle.io/Tr4pSt3R/Zeru]
 == DEPLOYMENT
 
 	* $ git add .
